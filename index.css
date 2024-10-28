@@ -23,11 +23,64 @@ body {
 }
 
 @media screen and (max-width: 1135px) {
+    footer {
+        padding: 24px !important;
+        width: 100% !important;
+    }
+
+    footer section {
+        max-width: calc(100% - 8px);
+    }
 
     footer section.footer--top,
     footer div.uber--networks,
     footer div.copyright-links {
         flex-direction: column;
+    }
+
+    p.footer--title--text {
+        text-align: left;
+    }
+
+    ul.footer--menu--categories {
+        width: 68% !important;
+        flex-wrap: wrap;
+    }
+
+    li.footer--menu--category {
+        flex-basis: 50% !important;
+    }
+
+    footer div.location-info {
+        flex-direction: column;
+        margin: 48px 0 14px 0;
+        gap: 16px !important;
+    }
+
+    footer div.copyright-links {
+        flex-direction: column;
+    }
+
+    footer div.copyright-links--right {
+        justify-content: left !important;
+        margin-top: 48px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul.footer--menu--categories {
+        width: 68% !important;
+        flex-wrap: wrap;
+    }
+
+    li.footer--menu--category {
+        flex-basis: 100% !important;
+    }
+
+    footer div.socialmedia {
+        justify-content: space-between !important;
+        width: calc(100% - 48px) !important;
+        gap: initial !important;
     }
 }
 
@@ -195,7 +248,7 @@ footer {
 
 footer section {
     margin: auto;
-    width: 1152px;
+    max-width: 1152px;
     padding: 18px 12px;
 }
 
