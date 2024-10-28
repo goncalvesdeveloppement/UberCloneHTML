@@ -4,291 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Les livraisons avec Uber Eats — Devenez votre propre patron | Uber</title>
 </head>
-
-<style>
-    @font-face {
-        font-family: 'Uber Move';
-        src: url(./UberMoveMedium.otf);
-    }
-
-    @font-face {
-        font-family: 'Uber Move Bold';
-        src: url(./UberMoveBold.otf);
-    }
-
-    :root {
-        --noir: #000000;
-        --blanc: #ffffff;
-        --gris: #afafaf;
-        --font1: 'Uber Move', 'Helvetica', 'Arial', sans-serif;
-    }
-
-    body {
-        font-family: var(--font1);
-        margin: 0;
-    }
-
-    @media screen and (max-width: 1135px) {
-
-        footer section.footer--top,
-        footer div.uber--networks,
-        footer div.copyright-links {
-            flex-direction: column;
-        }
-    }
-
-    /* ------------ HEADER ------------ */
-
-    /* nav */
-    header ul {
-        padding: 0;
-    }
-
-    header .nav a {
-        text-decoration: none;
-    }
-
-    header .a-white a {
-        color: white;
-    }
-
-    /* background */
-    .bg-black {
-        background-color: #000000;
-    }
-
-    .bg-none {
-        background: none;
-    }
-
-    /* color*/
-    .c-white {
-        color: white;
-    }
-
-    .c-black {
-        color: black;
-    }
-
-    /* text */
-    .text-decoration-none {
-        text-decoration: none;
-    }
-
-    .j-around {
-        justify-content: space-around;
-    }
-
-    .j-between {
-        justify-content: space-between;
-    }
-
-    /* display */
-    .d-flex {
-        display: flex;
-    }
-
-    /*margin*/
-    .my-10 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .m-t-auto {
-        margin-top: auto;
-    }
-
-    .m-b-auto {
-        margin-bottom: auto;
-    }
-
-    .margin-b>a {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .margin-b>div {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    .px-20 {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .py-10 {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-
-    .px-50 {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    /* border */
-    .border-none {
-        border: none;
-    }
-
-    .border-radius {
-        border-radius: 20px 20px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10;
-        padding-right: 10px;
-    }
-
-    #header-mobile {
-        display: none;
-    }
-
-    @media screen and (max-width: 1100px) {
-        #header-desktop {
-            display: none;
-        }
-
-        #header-mobile {
-            display: block;
-        }
-    }
-
-    /* ------------ FOOTER ------------ */
-
-    footer {
-        background-color: var(--noir);
-        color: var(--blanc);
-        width: 100%;
-        position: absolute;
-        left: 0;
-        width: 1280px;
-        padding: 64px calc(50% - 640px);
-    }
-
-    footer section {
-        margin: auto;
-        width: 1152px;
-        padding: 18px 12px;
-    }
-
-    footer ul {
-        list-style-type: none;
-    }
-
-    footer * a,
-    footer * p {
-        font-size: 14px;
-    }
-
-    footer * a {
-        text-decoration: none;
-        color: var(--blanc);
-    }
-
-    footer section.footer--top {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    footer div.footer--title {
-        order: 2;
-        text-align: right;
-        width: 30%;
-    }
-
-    div.footer--help {
-        height: 112px;
-    }
-
-    p.footer--help--title {
-        font-size: 24px;
-    }
-
-    footer nav.footer--menu ul.footer--menu--categories {
-        display: flex;
-        justify-content: space-between;
-        padding-left: 0;
-        width: 100%;
-        flex: 1 1 0px;
-    }
-
-    footer nav.footer--menu li {
-        padding-left: 0;
-        flex-basis: 100%;
-    }
-
-    footer nav.footer--menu ul {
-        padding-left: 0;
-    }
-
-    footer li.footer--menu--category--title p {
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    footer li.footer--menu--category--item {
-        margin-bottom: 16px;
-    }
-
-    footer div.uber--networks {
-        display: flex;
-        justify-content: space-between;
-        padding: 18px 0;
-    }
-
-    footer div.uber--networks div.socialmedia {
-        display: flex;
-        width: 60%;
-        gap: 96px;
-        justify-content: left;
-    }
-
-    footer div.uber--networks div.socialmedia svg {
-        font-size: 18px;
-    }
-
-    footer div.uber--networks div.location-info {
-        display: flex;
-        width: 40%;
-        gap: 24px;
-        justify-content: right;
-    }
-
-    footer div.download-app {
-        display: flex;
-        gap: 12px;
-        justify-content: left;
-        padding: 48px 0;
-    }
-
-    footer div.download-app img {
-        height: 40px;
-    }
-
-    footer div.copyright-links {
-        color: var(--gris);
-        font-size: 14px;
-        font-weight: 100;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    footer div.copyright-links--right {
-        display: flex;
-        justify-content: right;
-        gap: 32px;
-        width: 70%;
-    }
-
-    footer div.copyright-links--right a {
-        color: var(--gris);
-        font-size: 14px;
-        font-weight: 100;
-    }
-</style>
 
 <body>
     <!-- ###### Header by Mohamed ###### -->
@@ -356,47 +74,83 @@
 
     <!-- ###### Content by Tarek ###### -->
 
-    <h1 class="css-cgxnTe">Livrez quand vous voulez, générez des revenus sur mesure</h1>
+    <main>
+        <div class="d-flex bg-black c-white p-50">
+            <h1 class="size-56">Livrez quand vous voulez, générez des revenus sur mesure</h1>
+            <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_552,w_552/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png"
+                alt="Livrez avec l'application Uber" aria-hidden="true" role="presentation" class="css-ZwMiT">
+        </div>
+        <div class="d-flex p-50">
+            <div>
+                <h2 class="size-42">En savoir plus sur la livraison avec Uber Eats</h2>
 
-    <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_552,w_552/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png"
-        alt="Livrez avec l'application Uber" aria-hidden="true" role="presentation" class="css-ZwMiT">
+                <p class="cmln__paragraph">Livrer avec Uber Eats, c’est l’activité idéale pour compléter ses revenus en
+                    toute
+                    liberté. Vous pouvez livrer où vous voulez, quand vous&nbsp;voulez.</p>
+            </div>
+            <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_368,w_552/v1617104233/assets/0e/f21ba5-c5b0-4365-a527-8640f59fbc96/original/UberIM_003072---mobile.jpg"
+                alt="Deliver with Uber Eats" aria-hidden="true" role="presentation" class="css-ZwMiT">
 
-    <h2 class="css-jmnQxd">En savoir plus sur la livraison avec Uber Eats</h2>
+        </div>
 
-    <p class="cmln__paragraph">Livrer avec Uber Eats, c’est l’activité idéale pour compléter ses revenus en toute
-        liberté. Vous pouvez livrer où vous voulez, quand vous&nbsp;voulez.</p>
+        <div class="p-50">
+            <h2 class="size-42">Gagnez de l'argent à votre rythme</h2>
 
-    <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,h_368,w_552/v1617104233/assets/0e/f21ba5-c5b0-4365-a527-8640f59fbc96/original/UberIM_003072---mobile.jpg"
-        alt="Deliver with Uber Eats" aria-hidden="true" role="presentation" class="css-ZwMiT">
+            <div id="main-div" class="d-flex">
+                <div>
+                    <h3 class="css-hMHLWU">Votre vélo, vos horaires</h3>
 
-    <h2 class="css-jmnQxd">Gagnez de l'argent à votre rythme</h2>
+                    <p class="cmln__paragraph">Découvrez votre ville tout en livrant à vélo et ce, quand vous le voulez
+                        -
+                        pour une
+                        heure, un weekend, ou tout au long de la&nbsp;semaine.</p>
+                </div>
 
-    <h3 class="css-hMHLWU">Votre vélo, vos horaires</h3>
+                <div>
+                    <h3 class="css-hMHLWU">Paiement hebdomadaire</h3>
 
-    <p class="cmln__paragraph">Découvrez votre ville tout en livrant à vélo et ce, quand vous le voulez - pour une
-        heure, un weekend, ou tout au long de la&nbsp;semaine.</p>
+                    <p class="cmln__paragraph">Vous recevez vos paiements chaque début de semaine. Après un certain
+                        nombre
+                        de
+                        livraisons, vous débloquerez l’option FlexPay vous permettant d’encaisser vos revenus tous
+                        les&nbsp;jours.
+                    </p>
 
-    <h3 class="css-hMHLWU">Paiement hebdomadaire</h3>
+                </div>
 
-    <p class="cmln__paragraph">Vous recevez vos paiements chaque début de semaine. Après un certain nombre de
-        livraisons, vous débloquerez l’option FlexPay vous permettant d’encaisser vos revenus tous les&nbsp;jours.</p>
+                <div>
+                    <h3 class="css-hMHLWU">Découvrez votre ville</h3>
 
-    <h2 class="css-jmnQxd">Fonctionnement</h2>
+                    <p class="cmln__paragraph">Découvrez toutes les facettes de votre ville tout en effectuant
+                        des&nbsp;livraisons.</p>
 
-    <h3 class="css-cEjZmB">1. Connectez-vous</h3>
+                </div>
+            </div>
+        </div>
 
-    <p class="cmln__paragraph">Prenez la route et connectez-vous à l'application pour les chauffeurs et les coursiers
-        afin de commencer à recevoir des demandes de&nbsp;livraison.</p>
 
-    <h3 class="css-cEjZmB">2. Livrez des commandes</h3>
 
-    <p class="cmln__paragraph">Dans l'application, vous avez accès à une suggestion d'itinéraire et à des informations
-        fournies par les restaurants ou les clients pour que vos livraisons se déroulent sans&nbsp;accroc.</p>
 
-    <h3 class="css-cEjZmB">3. Gagnez de l'argent</h3>
+        <h2 class="css-jmnQxd">Fonctionnement</h2>
 
-    <p class="cmln__paragraph">Vous pouvez suivre vos revenus et les encaisser de façon quotidienne
-        ou&nbsp;hebdomadaire.</p>
+        <h3 class="css-cEjZmB">1. Connectez-vous</h3>
+
+        <p class="cmln__paragraph">Prenez la route et connectez-vous à l'application pour les chauffeurs et les
+            coursiers afin de commencer à recevoir des demandes de&nbsp;livraison.</p>
+
+        <h3 class="css-cEjZmB">2. Livrez des commandes</h3>
+
+        <p class="cmln__paragraph">Dans l'application, vous avez accès à une suggestion d'itinéraire et à des
+            informations fournies par les restaurants ou les clients pour que vos livraisons se déroulent
+            sans&nbsp;accroc.</p>
+
+        <h3 class="css-cEjZmB">3. Gagnez de l'argent</h3>
+
+        <p class="cmln__paragraph">Vous pouvez suivre vos revenus et les encaisser de façon quotidienne
+            ou&nbsp;hebdomadaire.</p>
+
+
+    </main>
 
     <!-- ###### Footer by Anthony ###### -->
 
