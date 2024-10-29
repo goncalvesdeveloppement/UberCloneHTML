@@ -194,6 +194,11 @@ header .header--lang-switcher {
     background-color: var(--grisfonce) !important;
 }
 
+#AboutLink {
+    display: flex;
+    gap: 6px;
+}
+
 #MoreLink {
     display: none;
 }
