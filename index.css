@@ -13,75 +13,16 @@
 :root {
     --noir: #000000;
     --blanc: #ffffff;
+    --grisclair: #e2e2e2;
     --gris: #afafaf;
+    --grisfonce: #282828;
+    --grismoyen: #4b4b4b;
     --font1: 'Uber Move', 'Helvetica', 'Arial', sans-serif;
 }
 
 body {
     font-family: var(--font1);
     margin: 0;
-}
-
-@media screen and (max-width: 1135px) {
-    footer {
-        padding: 24px !important;
-        width: 100% !important;
-    }
-
-    footer section {
-        max-width: calc(100% - 8px);
-    }
-
-    footer section.footer--top,
-    footer div.uber--networks,
-    footer div.copyright-links {
-        flex-direction: column;
-    }
-
-    p.footer--title--text {
-        text-align: left;
-    }
-
-    ul.footer--menu--categories {
-        width: 68% !important;
-        flex-wrap: wrap;
-    }
-
-    li.footer--menu--category {
-        flex-basis: 50% !important;
-    }
-
-    footer div.location-info {
-        flex-direction: column;
-        margin: 48px 0 14px 0;
-        gap: 16px !important;
-    }
-
-    footer div.copyright-links {
-        flex-direction: column;
-    }
-
-    footer div.copyright-links--right {
-        justify-content: left !important;
-        margin-top: 48px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    ul.footer--menu--categories {
-        width: 68% !important;
-        flex-wrap: wrap;
-    }
-
-    li.footer--menu--category {
-        flex-basis: 100% !important;
-    }
-
-    footer div.socialmedia {
-        justify-content: space-between !important;
-        width: calc(100% - 48px) !important;
-        gap: initial !important;
-    }
 }
 
 /* ------------ HEADER ------------ */
@@ -149,16 +90,6 @@ header .a-white a {
     margin-bottom: auto;
 }
 
-.margin-b>a {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.margin-b>div {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 .px-20 {
     padding-left: 20px;
     padding-right: 20px;
@@ -191,14 +122,80 @@ header .a-white a {
     display: none;
 }
 
-@media screen and (max-width: 1100px) {
-    #header-desktop {
-        display: none;
-    }
+#header-mobile .header--top {
+    height: 44px;
+}
 
-    #header-mobile {
-        display: block;
-    }
+#header-desktop .header--top {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+#header-desktop .header--top--container {
+    min-width: 1081px;
+    max-width: 1280px;
+    margin: auto;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+#header-desktop .header--top--menu {
+    height: 29px;
+    align-items: center;
+}
+
+.header-desktop--title, .header-mobile--title {
+    font-size: 24px;
+}
+
+.header-desktop--title {
+    margin-right: 12px;
+    position: relative;
+    bottom: 2px;
+}
+
+header .btn-login, header .btn-register {
+    padding: 10px 12px;
+    font-family: var(--font1);
+    text-decoration: none;
+}
+
+#header-desktop .btn-register {
+    margin-left: 8px;
+}
+
+header .btn-register {
+    color: var(--noir) !important;
+    background-color: var(--blanc);
+}
+
+header .btn-register:hover {
+    background-color: var(--grisclair);
+}
+
+header .header--lang-switcher {
+    gap: 8px;
+    margin-right: 20px;;
+}
+
+#header-desktop a {
+    padding: 10px 12px;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.header--about {
+    align-items: center;
+}
+
+#header-desktop a.bghover:hover {
+    background-color: var(--grisfonce) !important;
+}
+
+#MoreLink {
+    display: none;
 }
 
 /*-------- MAIN --------- */
@@ -365,4 +362,96 @@ footer div.copyright-links--right a {
     color: var(--gris);
     font-size: 14px;
     font-weight: 100;
+}
+
+/* ------------ RESPONSIVE ------------ */
+
+@media screen and (max-width: 1204px) {
+    #MoreLink, #UberLink {
+        display: none;
+    }
+
+    #AboutLink {
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 1174px) {
+    #UberLink, #AboutLink {
+        display: none;
+    }
+
+    #MoreLink {
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 1135px) {
+    #header-desktop {
+        display: none;
+    }
+
+    #header-mobile {
+        display: block;
+    }
+
+    footer {
+        padding: 24px !important;
+        width: 100% !important;
+    }
+
+    footer section {
+        max-width: calc(100% - 8px);
+    }
+
+    footer section.footer--top,
+    footer div.uber--networks,
+    footer div.copyright-links {
+        flex-direction: column;
+    }
+
+    p.footer--title--text {
+        text-align: left;
+    }
+
+    ul.footer--menu--categories {
+        width: 68% !important;
+        flex-wrap: wrap;
+    }
+
+    li.footer--menu--category {
+        flex-basis: 50% !important;
+    }
+
+    footer div.location-info {
+        flex-direction: column;
+        margin: 48px 0 14px 0;
+        gap: 16px !important;
+    }
+
+    footer div.copyright-links {
+        flex-direction: column;
+    }
+
+    footer div.copyright-links--right {
+        justify-content: left !important;
+        margin-top: 48px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul.footer--menu--categories {
+        width: 68% !important;
+        flex-wrap: wrap;
+    }
+
+    li.footer--menu--category {
+        flex-basis: 100% !important;
+    }
+
+    footer div.socialmedia {
+        justify-content: space-between !important;
+        width: calc(100% - 48px) !important;
+        gap: initial !important;
+    }
 }
