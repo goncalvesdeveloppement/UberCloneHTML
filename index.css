@@ -150,7 +150,7 @@ header .a-white a {
 }
 
 #header-desktop .header--top--container, #header-desktop .header--bottom--container {
-    min-width: 1081px;
+    min-width: 981px;
     max-width: 1280px;
     margin: auto;
     justify-content: space-between;
@@ -271,16 +271,68 @@ header .header--lang-switcher {
     margin-right: 20px;
 }
 
+main section {
+    padding: 64px 64px;
+}
+
+main section div.container {
+    max-width: 1216px;
+    width: calc(100% - 64px);
+    padding: 32px;
+}
+
+#DeliverIntro {
+    background-color: var(--noir);
+}
+
+#DeliverIntro .container {
+    gap: 28px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto;
+}
+
+#DeliverIntro h1 {
+    margin-top: 0;
+}
+
+#DeliverIntro img {
+    width: 526px;
+    height: 526px;
+}
+
+#DeliverIntro .login-link {
+    display: block;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    color: var(--blanc);
+}
+
+#DeliverIntro .start-button {
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 18px;
+    border-radius: 8px;
+    padding: 14px 25px;
+    display: inline-block;
+    color: var(--noir);
+    background-color: var(--blanc);
+}
+
+#DeliverIntro .container .left {
+    width: 40%;
+}
+
 /* ------------ FOOTER ------------ */
 
 footer {
     background-color: var(--noir);
     color: var(--blanc);
-    width: 100%;
     position: absolute;
     left: 0;
-    width: 1280px;
-    padding: 64px calc(50% - 640px);
+    width: calc(100% - 64px);
+    padding: 64px 32px;
 }
 
 footer section {
@@ -435,6 +487,35 @@ footer div.copyright-links--right a {
         display: block;
     }
 
+    main section {
+        padding: 0;
+    }
+
+    .flexmob {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 16px;
+    }
+
+    #DeliverIntro .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #DeliverIntro img {
+        width: 100%;
+        height: 100%;
+    }
+
+    #DeliverIntro h1 {
+        font-size: 40px;
+    }
+
+    #DeliverIntro .container .left {
+        width: 100%;
+    }
+
     footer {
         padding: 24px !important;
         width: 100% !important;
@@ -483,6 +564,15 @@ footer div.copyright-links--right a {
     ul.footer--menu--categories {
         width: 68% !important;
         flex-wrap: wrap;
+    }
+
+    #DeliverIntro h1 {
+        font-size: 32px;
+    }
+
+    .flexmob {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     li.footer--menu--category {
