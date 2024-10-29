@@ -15,6 +15,7 @@
     --blanc: #ffffff;
     --grisclair: #e2e2e2;
     --gris: #afafaf;
+    --grisinter: #6b6b6b;
     --grisfonce: #282828;
     --grismoyen: #4b4b4b;
     --font1: 'Uber Move', 'Helvetica', 'Arial', sans-serif;
@@ -55,7 +56,7 @@ header .a-white a {
 }
 
 .c-black {
-    color: black;
+    color: var(--grisfonce);
 }
 
 /* text */
@@ -126,19 +127,49 @@ header .a-white a {
     height: 44px;
 }
 
-#header-desktop .header--top {
+#header-desktop .header--top, #header-desktop .header--bottom {
     height: 64px;
     display: flex;
     align-items: center;
 }
 
-#header-desktop .header--top--container {
+#header-mobile .header--bottom {
+    height: 64px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 8px;
+}
+
+#header-mobile .header--bottom *:hover {
+    color: var(--grisinter);
+}
+
+#header-mobile .header--bottom * {
+    cursor: pointer;
+}
+
+#header-desktop .header--top--container, #header-desktop .header--bottom--container {
     min-width: 1081px;
     max-width: 1280px;
     margin: auto;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
+}
+
+.header--bottom--menu {
+    align-items: center;
+    display: flex;
+}
+
+#DeliverTitle {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#DeliverTitleMob {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 #header-desktop .header--top--menu {
@@ -154,6 +185,10 @@ header .a-white a {
     margin-right: 12px;
     position: relative;
     bottom: 2px;
+}
+
+.header-desktop--title a {
+    padding-left: 0 !important;
 }
 
 header .btn-login, header .btn-register {
