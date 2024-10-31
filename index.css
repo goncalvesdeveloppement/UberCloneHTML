@@ -18,12 +18,14 @@
     --grisinter: #6b6b6b;
     --grisfonce: #282828;
     --grismoyen: #4b4b4b;
+    --gristexte: #333333;
     --font1: 'Uber Move', 'Helvetica', 'Arial', sans-serif;
 }
 
 body {
     font-family: var(--font1);
     margin: 0;
+    color: var(--gristexte);
 }
 
 /* ------------ HEADER ------------ */
@@ -326,25 +328,22 @@ main .wrapper h2{
 }
 
 main section {
-    padding: 64px 64px;
+    padding: 32px 64px;
 }
 
 main section div.container {
-    max-width: 1216px;
+    max-width: 1152px;
     width: calc(100% - 64px);
     padding: 32px;
-}
-
-#DeliverIntro {
-    background-color: var(--noir);
-}
-
-#DeliverIntro .container {
     gap: 28px;
     justify-content: space-between;
     flex-wrap: nowrap;
     align-items: center;
     margin: auto;
+}
+
+#DeliverIntro {
+    background-color: var(--noir);
 }
 
 #DeliverIntro h1 {
@@ -374,8 +373,39 @@ main section div.container {
     background-color: var(--blanc);
 }
 
-#DeliverIntro .container .left {
+main section .container .left {
     width: 40%;
+}
+
+div.money {
+    justify-content: space-between;
+    gap: 24px;
+}
+
+div.money div {
+    width: 33%;
+}
+
+div.fonctionnement {
+    width: calc(60% - 36px);
+    position: relative;
+}
+
+div.fonctionnement h3, div.fonctionnement p {
+    margin: 0;
+    padding-bottom: 12px;
+}
+
+div.fonctionnement *:not(.cmln__paragraph.end) {
+    border-left: 1px solid var(--gristexte);
+}
+
+div.fonctionnement * {
+    padding-left: 36px;
+}
+
+div.fonctionnement p {
+    padding-bottom: 48px;
 }
 
 /* ------------ FOOTER ------------ */
